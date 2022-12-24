@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("/static/img/301412-Pokemon.jpg") center fixed;
+    background-size: cover;
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+    text-rendering: geometricPrecision;
+    width: auto;
+    height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smooth: subpixel-antialiased;
+}
+
+.logo-container {
+    display: flex;
+}
+
+.pkm-logo {
+    width: 150px;
+    margin: 0 auto;
+}
+
+.sub-container {
+    display: flex;
+    margin: 0 auto;
+    width: 20%;
+    height: auto;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.sub-container button {
+    margin-left: 20px;
+}
+
+.dex-container {
+    margin: 0 auto;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dex-container img {
+    margin: 0 auto;
+    justify-content: center;
+}
