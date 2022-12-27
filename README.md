@@ -1,5 +1,5 @@
 # Pokédexter
-> Repositorio para practicar django y api rest.
+> Repositorio para practicar django.
 
 # Configuración de compilación
 ## Crear entorno virtual fuera de la carpeta

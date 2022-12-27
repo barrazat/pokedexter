@@ -18,10 +18,11 @@ body {
 
 .logo-container {
     display: flex;
+    height: 80px;
 }
 
 .logo-container a {
-    margin: 0 auto;
+    margin: 10px auto;
     width: 150px;
 }
 
@@ -30,29 +31,76 @@ body {
     margin: 0 auto;
 }
 
+.dexter {
+    background-color: rgba(255, 0, 0, 0.603);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 60vh;
+    height: 70vh;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    box-shadow: inset 0 0 200px rgba(255, 255, 255, 0.123);
+    border-radius: 5px;
+    border:2px solid rgba(255, 255, 255, 0.281);
+}
+
+.dexter::before {
+    box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.06);
+}
+
+.dex-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.dex-container img {
+    background-color: rgba(0, 225, 255, 0.603);
+    margin: 0 auto;
+    width: 180px;
+    justify-content: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 16px 3px rgba(0,0,0,0.1);
+    border:2px solid rgba(255, 255, 255, 0.281);
+}
+
+.dex-container h3 {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
 .sub-container {
     display: flex;
-    margin: 0 auto;
-    width: 20%;
-    height: auto;
+    margin: 20px auto;
+    width: 100%;
     align-content: center;
     align-items: center;
     text-align: center;
     justify-content: center;
 }
 
+.sub-container input[type=text] {
+    width: 70%;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('/static/img/searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+
 .sub-container button {
     margin-left: 20px;
-}
-
-.dex-container {
-    margin: 0 auto;
-    width: 20%;
-    display: flex;
-    flex-direction: column;
-}
-
-.dex-container img {
-    margin: 0 auto;
-    justify-content: center;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
 }

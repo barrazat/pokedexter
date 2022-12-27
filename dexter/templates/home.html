@@ -6,35 +6,33 @@
     <div class="logo-container">
         <a href="{% url 'home' %}"><img src="{% static 'img/international_pokemon_logo.png' %}" class="pkm-logo"></a>
     </div>
-    <form method="post" class="sub-container">
-        {% csrf_token %}
-        <input type="text" name="pokemon" placeholder="Busca tú Pokémon...">
-        <button type="submit">Buscar</button>
-    </form>
-    <div class="dex-container">
-        {% if number and name %}
-            <h3>
-                Número: {{number}}
-            </h3>
-            <h3>
-                Nombre: {{name}}
-            </h3>
-            <h3>
-                Altura: {{height}} M.
-            </h3>
-            <h3>
-                Peso: {{weight}} Kg.
-            </h3>
-            <h3>
-                Tipo {{type1}}{% if type2 %} y {{type2}}{% endif %}
-            </h3>
-            <img class="pkm-creature" src="{{sprite}}" alt="{{name}} sprite">
-        {% else %}
-        <div>
-            <h3>
-                Escribe el Nombre o ID de tú Pokémon
-            </h3>
+    <div class="dexter">
+        <form method="post" class="sub-container">
+            {% csrf_token %}
+            <input type="text" name="pokemon" placeholder="Busca tú Pokémon...">
+        </form>
+        <div class="dex-container">
+            {% if number and name %}
+                <img class="pkm-creature" src="{{sprite}}" alt="{{name}} sprite">
+                <h3>
+                    Nombre: {{name}}
+                </h3>
+                <h3>
+                    Altura: {{height}} M.
+                </h3>
+                <h3>
+                    Peso: {{weight}} Kg.
+                </h3>
+                <h3>
+                    Tipo: {{type1}}{% if type2 %} y {{type2}}{% endif %}
+                </h3>
+            {% else %}
+            <div>
+                <h3>
+                    Escribe el Nombre o ID de tú Pokémon
+                </h3>
+            </div>
+            {% endif %}
         </div>
-        {% endif %}
     </div>
 {% endblock %}
