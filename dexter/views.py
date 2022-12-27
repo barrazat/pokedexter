@@ -25,13 +25,13 @@ def home(request):
             weight_obtained = (float(datalist['weight']) * 0.1)
             weight_rounded = round(weight_obtained, 2)
 
-            test = datalist['types'][0]['type']['name'].capitalize()
-            test1=""
+            type1 = datalist['types'][0]['type']['name'].capitalize()
+            type2=""
             try:
                 if datalist['types'][1] in datalist['types']:
-                    test1 = datalist['types'][1]['type']['name'].capitalize()
+                    type2 = datalist['types'][1]['type']['name'].capitalize()
             except :
-                test1 =""
+                type2 =""
 
             data = {
                 "number": str(datalist['id']),
@@ -39,13 +39,14 @@ def home(request):
                 "height": str(height_rounded),
                 "weight": str(weight_rounded),
                 "sprite": str(datalist['sprites']['front_default']),
-                "type1": str(test),
-                "type2": str(test1),
+                "type1": str(type1),
+                "type2": str(type2),
             }
 
             print(data)
         else:
                 data = {}
     except:
-        raise Http404("no esta")
+        messages.error(request, "No existe el Pokémon que has buscado 😢")
+        return render(request, 'home.html')
     return render(request, 'home.html', data)

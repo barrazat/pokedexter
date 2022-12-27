@@ -20,6 +20,11 @@ body {
     display: flex;
 }
 
+.logo-container a {
+    margin: 0 auto;
+    width: 150px;
+}
+
 .pkm-logo {
     width: 150px;
     margin: 0 auto;
