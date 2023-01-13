@@ -26,15 +26,14 @@
                 <h3 class="type-md">
                     Tipo: 
                     <div class="type">
-                        <p class="{{type1|lower}}-type">{{type1}}</p> {% if type2 %} y <p class="{{type2|lower}}-type">{{type2}}</p>{% endif %}
+                        <p class="{{type1|lower}}-type type-txt">{{type1}}</p> {% if type2 %} y <p class="{{type2|lower}}-type type-txt">{{type2}}</p>{% endif %}
                     </div>
                 </h3>
 
             {% else %}
-            <div>
-                <h3>
-                    Escribe el Nombre o ID de tú Pokémon
-                </h3>
+            <div class="home-text">
+                <img class="trainer" src="{% static 'img/trainer.png' %}" alt="girl trainer">
+                <h2>Escribe el Nombre o ID de tú Pokémon</h2>
             </div>
             {% endif %}
         </div>
